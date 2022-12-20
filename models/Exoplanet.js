@@ -8,9 +8,8 @@ module.exports.list = () => exoplanetsTable;
 
 module.exports.save = (data) => {
   const exoplanetNameUpper = data.uniqueName.toUpperCase();
-  if (data.uniqueName === exoplanetNameUpper) {
+  if (data.uniqueName === exoplanetNameUpper){
     exoplanetsTable.push(data);
-    return true;
   }
   return false;
 };

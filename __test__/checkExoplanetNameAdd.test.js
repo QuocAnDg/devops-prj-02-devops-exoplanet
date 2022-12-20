@@ -25,6 +25,6 @@ describe('test add exoplanet', () => {
         hClass: 'Mésoplanète',
         discoveryYear: 2016,
       })
-    ).toBe(true);
+    ).toBe(false);
   });
 });
