@@ -18,4 +18,13 @@ describe('test add exoplanet', () => {
       })
     ).toBe(true);
   });
+  it('should return false if uniqueName contains special characters other than - and .', () => {
+    expect(
+      save({
+        uniqueName: 'Trappiste$****01****-00',
+        hClass: 'Mésoplanète',
+        discoveryYear: 2016,
+      })
+    ).toBe(true);
+  });
 });
