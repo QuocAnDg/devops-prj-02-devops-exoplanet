@@ -7,7 +7,7 @@ const exoplanetsTable = [
 module.exports.list = () => exoplanetsTable;
 
 module.exports.save = (data) => {
-  exoplanetsTable.push(data);
+  return false;
 };
 
 module.exports.search = (uniqueName) => {
