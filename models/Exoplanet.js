@@ -7,9 +7,11 @@ const exoplanetsTable = [
 module.exports.list = () => exoplanetsTable;
 
 module.exports.save = (data) => {
-  const exoplanetNameUpper = data.uniqueName.toUpperCase();
-  if (data.uniqueName === exoplanetNameUpper){
+
+  const match = data.uniqueName.match('^[A-Z 0-9.-]*$');
+  if(match !== null){
     exoplanetsTable.push(data);
+    return true;
   }
   return false;
 };
