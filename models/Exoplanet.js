@@ -8,12 +8,12 @@ module.exports.list = () => exoplanetsTable;
 
 module.exports.save = (data) => {
   /*
-  * uppercase made by Duong Quoc An
-  * special characters made by Yi Nghi Ke Man
-  *  regex idea by Nguyen Trong
-  */
+   * uppercase made by Duong Quoc An
+   * special characters made by Yi Nghi Ke Man
+   *  regex idea by Nguyen Trong
+   */
   const match = data.uniqueName.match('^[A-Z 0-9.-]*$');
-  if(match !== null){
+  if (match !== null) {
     exoplanetsTable.push(data);
     return true;
   }
